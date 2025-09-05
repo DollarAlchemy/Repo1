@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emoji Wizard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>🧙‍♂️ Emoji Wizard</h1>
+    <div class="controls">
+      <button id="togglePanel" aria-expanded="true" title="Toggle Skill Tree (T)">🧠 Skill Tree</button>
+      <button id="cycleElement" title="Cycle Element (E)">Cycle Element</button>
+    </div>
+  </header>
+
+  <main class="layout" id="layout">
+    <section id="playfield" class="playfield" aria-label="Game area">
+      <div id="hud" class="hud">
+        <div class="row"><span>HP:</span><span id="hp">100</span></div>
+        <div class="row"><span>Lvl:</span><span id="level">1</span><span> • SP:</span><span id="sp">0</span></div>
+        <div class="row"><span>Elem:</span><span id="element">Fire</span></div>
+        <div class="row"><span>Score:</span><span id="score">0</span></div>
+        <div class="xpbar"><div id="xpfill"></div></div>
+      </div>
+    </section>
+
+    <aside id="skillpanel" class="panel" aria-label="Skill tree">
+      <div class="panel-header">Skill Tree</div>
+      <div id="skilltree" class="tree"></div>
+    </aside>
+  </main>
+
+  <footer class="footer">Move: WASD/Arrows • Fire: Space • Element: E • Toggle Tree: T</footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
